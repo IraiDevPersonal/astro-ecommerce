@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+
+type Props = {
+  placeholder?: string;
+  classNames?: string[] | string;
+};
+
+const { placeholder = "Buscar", classNames = [] } = Astro.props;
+const parsedClassNames =
+  typeof classNames === "string" ? [classNames] : classNames;
+---
+
+<div
+  class:list={[
+    "bg-field flex w-full max-w-4xl justify-between rounded-full p-1 ps-6",
+    ...parsedClassNames,
+  ]}
+>
+  <input
+    class="w-full pe-4 outline-none!"
+    placeholder={placeholder}
+    type="text"
+  />
+
+  <button
+    class:list={[
+      "grid h-9 w-9 min-w-9 cursor-pointer place-items-center rounded-full",
+      "group transition-colors duration-300",
+      "bg-primary text-white",
+      "hover:bg-primary/80",
+    ]}
+  >
+    <Icon
+      class="transition-transform duration-500 group-hover:scale-110"
+      name="search-icon"
+      size={20}
+    />
+  </button>
+</div>

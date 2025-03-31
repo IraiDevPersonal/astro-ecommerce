@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+import SearchInput from "./SearchInput.astro";
+import Button from "./Button.astro";
+---
+
+<header class="space-y-3 p-3 lg:space-y-0">
+  <div class="flex items-center gap-2 lg:justify-between">
+    <div class="mr-auto flex items-center gap-2 lg:mr-0 [&_span]:leading-1">
+      <span class="text-3xl font-extrabold">E</span>
+      <span class="text-xl font-bold">E-COMMERCE</span>
+      <Button classNames="hidden lg:grid">
+        <Icon name="menu-icon" size={24} />
+      </Button>
+    </div>
+
+    <SearchInput placeholder="Buscar productos" classNames="hidden lg:flex" />
+
+    <Button classNames="lg:hidden">
+      <Icon name="menu-icon" size={24} />
+    </Button>
+  </div>
+
+  <SearchInput placeholder="Buscar productos" classNames="lg:hidden" />
+</header>

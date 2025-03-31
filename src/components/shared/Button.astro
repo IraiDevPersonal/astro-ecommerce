@@ -1,0 +1,19 @@
+---
+type Props = {
+  classNames?: string | string[];
+};
+
+const { classNames = [] } = Astro.props;
+const parsedClassNames =
+  typeof classNames === "string" ? [classNames] : classNames;
+---
+
+<button
+  class:list={[
+    "hover:bg-secondary grid h-9 w-9 min-w-9 cursor-pointer place-content-center rounded-lg",
+    "transition-colors duration-300",
+    ...parsedClassNames,
+  ]}
+>
+  <slot />
+</button>
