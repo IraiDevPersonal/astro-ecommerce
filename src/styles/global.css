@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--color-neutral-100); /* Fondo general */
+  --color-surface: var(
+    --color-neutral-50
+  ); /* Superficie de elementos como tarjetas */
+  --color-text-primary: var(--color-neutral-800); /* Texto principal */
+  --color-text-secondary: var(--color-neutral-600); /* Texto secundario */
+  --color-text-muted: var(
+    --color-neutral-400
+  ); /* Texto deshabilitado o poco destacado */
+  --color-primary: var(--color-neutral-950); /* Color de acento */
+  --color-secondary: var(--color-neutral-200); /* Color secundario */
+  --color-base-shadow: --alpha(var(--color-neutral-500) / 10%); /* Color de sombras */
+}
