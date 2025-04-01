@@ -1,5 +1,30 @@
 ---
-import RootLayout from "../layouts/RootLayout.astro";
+import RootLayout from "@/layouts/RootLayout.astro";
+import HeroSlider from "@/components/solid/HeroSlider";
+import type { Product } from "@/interfaces/product";
+
+const products: Product[] = [
+  {
+    id: "1",
+    description: "Producto 1 desc",
+    title: "Producto 1",
+    url: "/img-1.avif",
+  },
+  {
+    id: "2",
+    description: "Producto 2 desc",
+    title: "Producto 2",
+    url: "/img-2.avif",
+  },
+  {
+    id: "3",
+    description: "Producto 3 desc",
+    title: "Producto 3",
+    url: "/img-3.avif",
+  },
+];
 ---
 
-<RootLayout title="Inicio" />
+<RootLayout title="Inicio">
+  <HeroSlider products={products} client:load />
+</RootLayout>

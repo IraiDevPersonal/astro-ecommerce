@@ -2,8 +2,8 @@
 
 @theme {
   /* --color-*: initial; */
-  --color-background: var(--color-neutral-100);
-  --color-surface: var(--color-neutral-50);
+  --color-background: var(--color-neutral-50);
+  --color-surface: var(--color-neutral-100);
   --color-text-primary: var(--color-neutral-800);
   --color-text-secondary: var(--color-neutral-600);
   --color-text-muted: var(--color-neutral-400);
@@ -14,4 +14,26 @@
   --color-field: --alpha(var(--color-neutral-200) / 70%);
   --color-field-hover: --alpha(var(--color-neutral-200) / 100%);
   --color-field-disabled: --alpha(var(--color-neutral-200) / 40%);
+}
+
+/* swiper pagination */
+.swiper-pagination {
+  @apply mt-9 flex items-center justify-center space-x-2 text-center;
+}
+
+.banner-pagination-bullet {
+  @apply bg-background h-2.5 w-2.5 cursor-pointer rounded-full opacity-100;
+}
+
+.banner-pagination-bullet-active {
+  @apply bg-primary h-2.5 w-5 duration-300;
+}
+
+.swiper-button-disabled {
+  @apply opacity-50 duration-300;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-text-primary! bg-surface grid h-14! w-14 min-w-14 place-content-center rounded-full;
 }
