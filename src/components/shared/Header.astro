@@ -9,17 +9,21 @@ import Button from "./Button.astro";
     <div class="mr-auto flex items-center gap-2 lg:mr-0 [&_span]:leading-1">
       <span class="text-3xl font-extrabold">E</span>
       <span class="text-xl font-bold">E-COMMERCE</span>
-      <Button classNames="hidden lg:grid">
+
+      <Button classlist={["hidden lg:grid"]}>
         <Icon name="menu-icon" size={24} />
       </Button>
     </div>
 
-    <SearchInput placeholder="Buscar productos" classNames="hidden lg:flex" />
+    <SearchInput
+      placeholder="Buscar productos"
+      classlist={["hidden lg:flex"]}
+    />
 
-    <Button classNames="lg:hidden">
+    <Button classlist={["lg:hidden"]}>
       <Icon name="menu-icon" size={24} />
     </Button>
   </div>
 
-  <SearchInput placeholder="Buscar productos" classNames="lg:hidden" />
+  <SearchInput placeholder="Buscar productos" classlist={["lg:hidden"]} />
 </header>

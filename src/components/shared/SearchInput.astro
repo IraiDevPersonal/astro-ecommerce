@@ -3,18 +3,16 @@ import { Icon } from "astro-icon/components";
 
 type Props = {
   placeholder?: string;
-  classNames?: string[] | string;
+  classlist?: string[];
 };
 
-const { placeholder = "Buscar", classNames = [] } = Astro.props;
-const parsedClassNames =
-  typeof classNames === "string" ? [classNames] : classNames;
+const { placeholder = "Buscar", classlist = [] } = Astro.props;
 ---
 
 <div
   class:list={[
-    "bg-field flex w-full max-w-4xl justify-between rounded-full p-1 ps-6",
-    ...parsedClassNames,
+    "bg-field flex w-full max-w-4xl justify-between rounded-full p-1 ps-4 md:ps-6",
+    ...classlist,
   ]}
 >
   <input
@@ -25,16 +23,15 @@ const parsedClassNames =
 
   <button
     class:list={[
-      "grid h-9 w-9 min-w-9 cursor-pointer place-items-center rounded-full",
+      "grid h-7 w-7 min-w-7 cursor-pointer place-items-center rounded-full md:h-9 md:w-9 md:min-w-9",
       "group transition-colors duration-300",
       "bg-primary text-white",
       "hover:bg-primary/80",
     ]}
   >
     <Icon
-      class="transition-transform duration-500 group-hover:scale-110"
+      class="size-4 transition-transform duration-500 group-hover:scale-110 md:size-5"
       name="search-icon"
-      size={20}
     />
   </button>
 </div>
